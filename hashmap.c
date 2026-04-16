@@ -76,6 +76,11 @@ void insertMap(HashMap * map, char * key, void * value) {
                     return;
                 }
                 posicion+=1;
+                if(posicion == map->capacity)
+                {
+                    posicion = 0;
+                }
+                
             }
     }
     
