@@ -38,3 +38,9 @@ hashmap.c:63:10: error: unused variable ‘posicion2’ [-Werror=unused-variable
       |          ^~~~~~~~~
 cc1: all warnings being treated as errors
 590e8c8
+Thu Apr 16 08:24:31 PM UTC 2026: 
+ hashmap.c | 1 -
+ 1 file changed, 1 deletion(-)
+ tests:  3|6
+total_score: 10/60
+594d0b8

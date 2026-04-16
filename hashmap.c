@@ -60,7 +60,6 @@ HashMap * createMap(long capacity) {
 
 void insertMap(HashMap * map, char * key, void * value) {
     long posicion = hash(key, map->capacity);
-    long posicion2 = posicion;
     Pair* par= createPair(key,value);
 
     if(map->buckets[posicion] == NULL)
