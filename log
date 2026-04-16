@@ -27,3 +27,14 @@ Thu Apr 16 08:17:51 PM UTC 2026:
  tests:  3|6
 total_score: 10/60
 f0f75e2
+Thu Apr 16 08:24:19 PM UTC 2026: 
+ hashmap.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:63:10: error: unused variable ‘posicion2’ [-Werror=unused-variable]
+   63 |     long posicion2 = posicion;
+      |          ^~~~~~~~~
+cc1: all warnings being treated as errors
+590e8c8
