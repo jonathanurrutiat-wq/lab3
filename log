@@ -2,3 +2,16 @@ Thu Apr 16 07:58:56 PM UTC 2026:
  tests:  0|7
 total_score: 0/60
 1f52835
+Thu Apr 16 08:13:27 PM UTC 2026: 
+ hashmap.c | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:78:28: error: expected ‘;’ before ‘}’ token
+   78 |                 posicion+=1
+      |                            ^
+      |                            ;
+   79 |             }
+      |             ~               
+28b13bb
