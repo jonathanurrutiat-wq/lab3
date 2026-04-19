@@ -121,7 +121,8 @@ void eraseMap(HashMap * map, char * key)
 {    
     long posicion = hash(key, map->capacity);
 
-    while (map->buckets[posicion] != NULL) {
+    while (map->buckets[posicion] != NULL) 
+    {
         if (map->buckets[posicion]->key != NULL && strcmp(map->buckets[posicion]->key, key) == 0) 
         {
             map->buckets[posicion]->key = NULL;
@@ -131,7 +132,11 @@ void eraseMap(HashMap * map, char * key)
 
         posicion++;
         if (posicion == map->capacity)
+        {
             posicion = 0;
+        }
+            
+    }
 }
 
 // 5. Implemente las funciones para recorrer la estructura: Pair * firstMap(HashMap * map) retorna el primer Pair válido del arreglo buckets. 
