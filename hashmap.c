@@ -45,8 +45,18 @@ int is_equal(void* key1, void* key2){
 // Inicialice el índice current a -1.
 
 HashMap * createMap(long capacity) {
-
-    return NULL;
+    HashMap *mapa = (HashMap*) malloc(sizeof(HashMap));
+    mapa->capacity = capacity;
+    mapa->current = -1;
+    mapa->size = 0;
+    mapa->buckets = (Pair**)malloc(sizeof(Pair*) * capacity);
+    
+    for (long i = 0; i < capacity; i++) 
+    {
+        mapa->buckets[i] = NULL;
+    }
+    
+    return mapa;
 }
 
 // 2. Implemente la función void insertMap(HashMap * map, char * key, void * value). 
@@ -83,8 +93,6 @@ void insertMap(HashMap * map, char * key, void * value) {
                 }
             }
     }
-
-    
     return;
 }
 
