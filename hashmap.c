@@ -221,7 +221,7 @@ void enlarge(HashMap * map) {
     Pair ** nuevo_arreglo;
     unsigned long long antigua_capacidad = map->capacity;
     map->capacity *= 2;
-    nuevo_arreglo = (Pair*) malloc(sizeof(Pair*) * map->capacity);
+    nuevo_arreglo = (Pair**) malloc(sizeof(Pair*) * map->capacity);
     map->buckets = nuevo_arreglo;
     map->size = 0;
 

@@ -315,3 +315,8 @@ hashmap.c:224:19: error: assignment to ‘Pair **’ from incompatible pointer t
   224 |     nuevo_arreglo = (Pair*) malloc(sizeof(Pair*) * map->capacity);
       |                   ^
 4ad2456
+Sun Apr 19 01:56:54 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+e944f6a
