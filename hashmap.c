@@ -120,7 +120,7 @@ Pair * searchMap(HashMap * map,  char * key) {
 void eraseMap(HashMap * map,  char * key) {    
     long posicion = hash(key, map->capacity);
     map->buckets[posicion]->key = NULL;
-
+    map->size--;
 }
 
 // 5. Implemente las funciones para recorrer la estructura: Pair * firstMap(HashMap * map) retorna el primer Pair válido del arreglo buckets. 
