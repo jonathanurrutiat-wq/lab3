@@ -62,3 +62,16 @@ Sun Apr 19 01:07:06 AM UTC 2026:
  tests:  4|5
 total_score: 15/60
 7e6a60f
+Sun Apr 19 01:08:28 AM UTC 2026: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:97:17: error: expected ‘;’ before ‘return’
+   97 |     map->size+=1
+      |                 ^
+      |                 ;
+   98 |     return;
+      |     ~~~~~~       
+bd9bb7a
