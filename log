@@ -233,3 +233,35 @@ Sun Apr 19 03:02:13 AM UTC 2026:
  tests:  13|2
 total_score: 40/60
 c6fec27
+Sun Apr 19 03:16:40 AM UTC 2026: 
+ hashmap.c | 21 +++++++--------------
+ 1 file changed, 7 insertions(+), 14 deletions(-)
+Compilation failed
+test.c: In function ‘eraseMap’:
+test.c:508:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  508 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:529:1: error: expected declaration or statement at end of input
+  529 | }
+      | ^
+test.c: At top level:
+test.c:508:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  508 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:218:5: error: ‘insert_test5’ defined but not used [-Werror=unused-function]
+  218 | int insert_test5(){ //factor de carga>0.7, se llama a función enlarge
+      |     ^~~~~~~~~~~~
+test.c:132:6: error: ‘compare_test’ defined but not used [-Werror=unused-function]
+  132 | void compare_test(){
+      |      ^~~~~~~~~~~~
+test.c:126:6: error: ‘hash_test3’ defined but not used [-Werror=unused-function]
+  126 | void hash_test3(){ //no random
+      |      ^~~~~~~~~~
+test.c:112:6: error: ‘hash_test2’ defined but not used [-Werror=unused-function]
+  112 | void hash_test2(){ // colisiones
+      |      ^~~~~~~~~~
+test.c:101:6: error: ‘hash_test1’ defined but not used [-Werror=unused-function]
+  101 | void hash_test1(){ // posición válida
+      |      ^~~~~~~~~~
+cc1: all warnings being treated as errors
+cf5e5ec
