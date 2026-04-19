@@ -128,7 +128,7 @@ void eraseMap(HashMap * map,  char * key) {
 
 Pair * firstMap(HashMap * map) {
     long i = 0;
-    while (true)
+    while (1)
         {
             if(map->buckets[i] != NULL)
             {
