@@ -132,3 +132,16 @@ Sun Apr 19 02:29:21 AM UTC 2026:
  tests:  6|4
 total_score: 20/60
 6ae7489
+Sun Apr 19 02:30:49 AM UTC 2026: 
+ hashmap.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:138:33: error: expected ‘;’ before ‘return’
+  138 |                 map->current = i
+      |                                 ^
+      |                                 ;
+  139 |                 return map->buckets[i];
+      |                 ~~~~~~           
+02b9415
