@@ -186,3 +186,16 @@ Sun Apr 19 02:45:25 AM UTC 2026:
  tests:  10|3
 total_score: 30/60
 93cc7d5
+Sun Apr 19 02:46:58 AM UTC 2026: 
+ hashmap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:121:21: error: too few arguments to function ‘hash’
+  121 |     long posicion = hash(key);
+      |                     ^~~~
+hashmap.c:28:6: note: declared here
+   28 | long hash( char * key, long capacity) {
+      |      ^~~~
+25ba83e
