@@ -118,7 +118,7 @@ Pair * searchMap(HashMap * map,  char * key)
             posicion++;
             if(posicion == map->capacity)
             {
-                posicion == 0;
+                posicion = 0;
             }
         }
 
