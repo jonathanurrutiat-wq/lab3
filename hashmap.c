@@ -135,7 +135,7 @@ Pair * firstMap(HashMap * map) {
             
             if(map->buckets[i] != NULL)
             {
-                map->current = i
+                map->current = i;
                 return map->buckets[i];
             }
 
