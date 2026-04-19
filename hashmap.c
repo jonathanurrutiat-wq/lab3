@@ -134,6 +134,10 @@ Pair * firstMap(HashMap * map) {
             {
                 return map->buckets[i];
             }
+
+            if(i == map->capacity)
+                break;
+            i++;
         }
         
         
