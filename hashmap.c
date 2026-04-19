@@ -221,19 +221,28 @@ void enlarge(HashMap * map) {
     Pair ** nuevo_arreglo;
     unsigned long long antigua_capacidad = map->capacity;
     map->capacity *= 2;
-    nuevo_arreglo = (Pair**) malloc(sizeof(Pair*) * map->capacity);
+    nuevo_arreglo = (Pair**) calloc(map->capacity *= 2, sizeof(Pair*));
     map->buckets = nuevo_arreglo;
     map->size = 0;
 
-    
+    unsigned long long contador = 0;
 
-    while(map->size <= antigua_capacidad)
+    while(contador <= antigua_capacidad)
         {
-            insertMap(map, array_original[map->size]->key,array_original[map->size]->value);
-            map->size++;
+            if(array_original[contador]!= NULL && array_original[contador]->key != NULL)
+            {
+                insertMap(map, array_original[contador]->key,array_original[contador]->value);
+                map->size = 0;
+                free(array_original[contador]);
+            }
+
+            contador++;
+            
         }
 
-    return;
+    free(array_original);
+
+    
 }
 
 
