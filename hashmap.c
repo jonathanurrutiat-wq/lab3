@@ -113,7 +113,7 @@ Pair * searchMap(HashMap * map,  char * key)
             if(map->buckets[posicion]->key != NULL && strcmp(map->buckets[posicion]->key, key) == 0)
             {
                 map->current = posicion;
-                return map->buckets[posicion]
+                return map->buckets[posicion];
             }
             posicion++;
             if(posicion == map->capacity)
