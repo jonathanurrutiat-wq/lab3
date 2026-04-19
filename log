@@ -81,3 +81,25 @@ Sun Apr 19 01:08:41 AM UTC 2026:
  tests:  5|4
 total_score: 20/60
 05557e8
+Sun Apr 19 02:24:13 AM UTC 2026: 
+ hashmap.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:130:18: error: invalid initializer
+  130 |     for(Pair i = map->buckets[0]; i== NULL; i = nextMap(map))
+      |                  ^~~
+hashmap.c:130:36: error: invalid operands to binary == (have ‘Pair’ and ‘void *’)
+  130 |     for(Pair i = map->buckets[0]; i== NULL; i = nextMap(map))
+      |                                    ^~
+hashmap.c:130:49: error: incompatible types when assigning to type ‘Pair’ from type ‘Pair *’
+  130 |     for(Pair i = map->buckets[0]; i== NULL; i = nextMap(map))
+      |                                                 ^~~~~~~
+hashmap.c:132:18: error: invalid operands to binary != (have ‘Pair’ and ‘void *’)
+  132 |             if(i != NULL)
+      |                  ^~
+hashmap.c:134:24: error: incompatible types when returning type ‘Pair’ but ‘Pair *’ was expected
+  134 |                 return i;
+      |                        ^
+42f0234
