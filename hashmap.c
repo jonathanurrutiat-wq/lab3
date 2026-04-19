@@ -132,14 +132,18 @@ Pair * firstMap(HashMap * map) {
         {
             if(i == map->capacity)
                 break;
-            
-            if(map->buckets[i] != -1)
+            if(map->buckets[i] != NULL)
             {
-                map->current = i;
-                return map->buckets[i];
-            }
+                if(map->buckets[i]->key != NULL)
+                    {
+                        map->current = i;
+                        return map->buckets[i];
+                    }  
 
+                
+            }
             i++;
+                
         }
         
         
