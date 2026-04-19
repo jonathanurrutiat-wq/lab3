@@ -120,7 +120,7 @@ Pair * searchMap(HashMap * map,  char * key) {
 void eraseMap(HashMap * map,  char * key) {    
     long posicion = hash(key, map->capacity);
     
-    if(strcmp(map->buckets[posicion] != NULL && map->buckets[posicion]->key != NULL && map->buckets[posicion]->key, key) == 0)
+    if(map->buckets[posicion] != NULL && map->buckets[posicion]->key != NULL && strcmp(map->buckets[posicion]->key, key) == 0)
     {
         map->buckets[posicion]->key = NULL;
         map->size--;
