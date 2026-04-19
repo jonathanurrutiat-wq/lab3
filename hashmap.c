@@ -133,7 +133,7 @@ Pair * firstMap(HashMap * map) {
             if(i == map->capacity)
                 break;
             
-            if(map->buckets[i] != NULL)
+            if(map->buckets[i] != -1)
             {
                 map->current = i;
                 return map->buckets[i];
