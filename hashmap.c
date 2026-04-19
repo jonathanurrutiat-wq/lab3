@@ -151,7 +151,22 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
-
+    long i = map->current;
+    while(1)
+        {
+            if(i == map->capacity)
+                break;
+            if(map->buckets[i] != NULL)
+            {
+                if(map->buckets[i]->key != NULL)
+                {
+                    map->current = i;
+                    return map->buckets[i];
+                }
+            }
+            i++;
+            
+        }
     return NULL;
 }
 
