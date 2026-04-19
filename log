@@ -271,3 +271,20 @@ Sun Apr 19 03:17:48 AM UTC 2026:
  tests:  13|2
 total_score: 40/60
 46c8619
+Sun Apr 19 03:24:30 AM UTC 2026: 
+ hashmap.c | 19 +++++++++++++++++--
+ 1 file changed, 17 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:116:46: error: expected ‘;’ before ‘}’ token
+  116 |                 return map->buckets[posicion]
+      |                                              ^
+      |                                              ;
+  117 |             }
+      |             ~                                 
+hashmap.c:121:26: error: statement with no effect [-Werror=unused-value]
+  121 |                 posicion == 0;
+      |                 ~~~~~~~~~^~~~
+cc1: all warnings being treated as errors
+855b1de
