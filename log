@@ -211,3 +211,19 @@ Sun Apr 19 02:47:56 AM UTC 2026:
  tests:  11|3
 total_score: 30/60
 6c7f2cd
+Sun Apr 19 03:01:07 AM UTC 2026: 
+ hashmap.c | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:123:85: error: passing argument 1 of ‘strcmp’ makes pointer from integer without a cast [-Wint-conversion]
+  123 |     if(strcmp(map->buckets[posicion] != NULL && map->buckets[posicion]->key != NULL && map->buckets[posicion]->key, key) == 0)
+      |               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                     |
+      |                                                                                     int
+In file included from test.c:3:
+/nix/store/41pf3md9zgpda9kwh6rzn5kaddf7i0lp-glibc-2.40-66-dev/include/string.h:156:32: note: expected ‘const char *’ but argument is of type ‘int’
+  156 | extern int strcmp (const char *__s1, const char *__s2)
+      |                    ~~~~~~~~~~~~^~~~
+0d21c04
