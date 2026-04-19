@@ -217,7 +217,23 @@ Pair * nextMap(HashMap * map) {
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
 
+    Pair** array_original = map->buckets;
+    Pair ** nuevo_arreglo;
+    unsigned long long antigua_capacidad = map->capacity;
+    map->capacity *= 2;
+    nuevo_arreglo = (Pair*) malloc(sizeof(Pair*) * map->capacity);
+    map->buckets = nuevo_arreglo;
+    map->size = 0;
 
+    
+
+    while(map->size <= antigua_capacidad)
+        {
+            insertMap(map, array_original[map->size]->key,array_original[map->size]->value);
+            map->size++;
+        }
+
+    return;
 }
 
 
