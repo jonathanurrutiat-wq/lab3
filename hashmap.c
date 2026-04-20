@@ -171,8 +171,6 @@ Pair * firstMap(HashMap * map) {
                         map->current = i;
                         return map->buckets[i];
                     }  
-
-                
             }
             i++;
                 
@@ -223,7 +221,7 @@ void enlarge(HashMap * map) {
     map->capacity *= 2;
     nuevo_arreglo = (Pair**) calloc(map->capacity *= 2, sizeof(Pair*));
     map->buckets = nuevo_arreglo;
-    map->size = 0;
+    map->size = 0;    
 
     unsigned long long contador = 0;
 
@@ -232,7 +230,7 @@ void enlarge(HashMap * map) {
             if(array_original[contador]!= NULL && array_original[contador]->key != NULL)
             {
                 insertMap(map, array_original[contador]->key,array_original[contador]->value);
-                map->size = 0;
+                map->size++;
                 free(array_original[contador]);
             }
 
